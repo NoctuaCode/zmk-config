@@ -58,10 +58,10 @@
 // |  :  |  <  |  >  |  {  |  }  |  "  |    |  ,  |  1  |  2  |  3  |  %  |     |
 //                   |     |  0  |     |    |     |     |     |
                         bindings = <
-   &kp GRAVE                    &kp EXCL       &kp AT         &kp LBKT        &kp RBKT        &kp CARET                    &kp DOT    &kp N7        &kp N8        &kp N9        &kp ASTRK    &trans
-   &tp LG(LA(LC(LSHFT))) TILDE  &tp LGUI HASH  &tp LALT DLLR  &tp LSHFT LPAR  &tp LCTRL RPAR  &tp LA(LC(LSHFT)) AMPS       &tp LA(LC(LSHFT)) PLUS   &tp RCTRL N4  &tp RSHFT N5  &tp LALT N6  &tp RGUI EQUAL  &tp LG(LA(LC(LSHFT)))
-   &kp COLON                    &kp LT         &kp GT         &kp LBRC        &kp RBRC        &kp DQT                      &kp COMMA  &kp N1        &kp N2        &kp N3        &kp PRCNT    &trans
-                                                              &trans          &kp N0          &trans                       &trans     &trans        &trans
+   &kp GRAVE                    &kp EXCL       &kp AT         &kp LBKT        &kp RBKT        &kp CARET                    &kp DOT                  &kp N7        &kp N8        &kp N9       &kp ASTRK       &trans
+   &tp LG(LA(LC(LSHFT))) TILDE  &tp LGUI HASH  &tp LALT DLLR  &tp LSHFT LPAR  &tp LCTRL RPAR  &tp LA(LC(LSHFT)) AMPS       &tp LA(LC(LSHFT)) PLUS   &tp RCTRL N4  &tp RSHFT N5  &tp LALT N6  &tp RGUI EQUAL  &tp LG(LA(LC(LSHFT))) MINUS
+   &kp COLON                    &kp LT         &kp GT         &kp LBRC        &kp RBRC        &kp DQT                      &kp COMMA                &kp N1        &kp N2        &kp N3       &kp PRCNT       &trans
+                                                              &trans          &kp N0          &trans                       &trans                   &trans        &trans
                         >;
                 };
         };
