@@ -5,18 +5,16 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&led_strip {
-    chain-length = <27>;
-};
+&led_strip { chain-length = <27>; };
 
 / {
-        behaviors {
-          tp: tap_preferred {
+    behaviors {
+        tp: tap_preferred {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_PREFERRED";
             #binding-cells = <2>;
@@ -24,51 +22,64 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-          }; 
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // -----------------------------------------------------------------------------------------
+            // | TAB  | SEMI | COMMA | DOT |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  |  /  |
+            // | ESC  |  A   |   O   |  E  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |  -  |
+            // | SHFT |  '   |   Q   |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  |  \  |
+            //                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
+
+            bindings = <
+&kp TAB     &kp Q       &kp W       &kp E              &kp R        &kp T        &kp Y      &kp U        &kp I                  &kp O       &kp P          &kp MINUS
+&kp ESCAPE  &tp LGUI A  &tp LALT S  &tp LSHFT D        &tp LCTRL F  &kp G        &kp H      &tp LCTRL J  &tp LSHFT K            &tp LALT L  &tp LGUI SEMI  &kp SQT
+&to 3       &kp Z       &kp X       &kp C              &kp V        &kp B        &kp N      &kp M        &kp COMMA              &kp DOT     &kp FSLH       &kp BSLH
+                                    &kp LA(LC(LSHFT))  &kp SPACE    &lt 1 RET    &lt 2 DEL  &kp BSPC     &kp LA(LC(LG(LSHFT)))
+            >;
         };
 
-        keymap {
-                compatible = "zmk,keymap";
+        lower_layer {
+            // -----------------------------------------------------------------------------------------
+            // |       |   1   |   2   |   3   |   4   |   5   |   |   6   |   7   |   8   |   9   |   0   |       |
+            // |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   |   |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  |
+            // | BTCLR |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |   |       |       |       |       |       |       |
+            //                         |       |       |       |   |       |       |       |
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// | TAB  | SEMI | COMMA | DOT |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  |  /  |
-// | ESC  |  A   |   O   |  E  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |  -  |
-// | SHFT |  '   |   Q   |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  |  \  |
-//                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
-                        bindings = <
-   &kp TAB                    &kp Q       &kp W       &kp E        &kp R        &kp T                      &kp Y                &kp U        &kp I        &kp O       &kp P          &kp SQT
-   &tp LG(LA(LC(LSHFT))) ESC  &tp LGUI A  &tp LALT S  &tp LSHFT D  &tp LCTRL F  &tp LA(LC(LSHFT)) G        &tp LA(LC(LSHFT)) H  &tp RCTRL J  &tp RSHFT K  &tp LALT L  &tp RGUI SEMI  &tp LG(LA(LC(LSHFT))) MINUS
-   &kp LSHFT                  &kp Z       &kp X       &kp C        &kp V        &kp B                      &kp N                &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
-                                                      &kp RET      &kp SPACE    &mo 1                      &mo 2                &kp BSPC     &kp DEL
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |       |   1   |   2   |   3   |   4   |   5   |   |   6   |   7   |   8   |   9   |   0   |       |
-// |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   |   |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  |
-// | BTCLR |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |   |       |       |       |       |       |       |
-//                         |       |       |       |   |       |       |       |
-                        bindings = <
-   &trans                    &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                   &kp N6                &kp N7        &kp N8        &kp N9        &kp N0        &trans
-   &tp LG(LA(LC(LSHFT))) F1  &tp LGUI F2   &tp LALT F3   &tp LSHFT F4  &tp LCTRL F5  &tp LA(LC(LSHFT)) F6     &tp LA(LC(LSHFT)) F7  &tp LCTRL F8  &tp LSHFT F9  &tp LALT F10  &tp LGUI F11  &tp LG(LA(LC(LSHFT))) F12
-   &bt BT_CLR                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4             &out OUT_TOG          &rgb_ug RGB_TOG   &rgb_ug RGB_SPD   &rgb_ug RGB_SPI   &rgb_ug RGB_EFF   &trans
-                                                         &trans        &trans        &trans                   &trans                &trans        &trans
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  `  |  !  |  @  |  [  |  ]  |  ^  |    |  .  | HOME |  UP  |  END  |  *  |     |
-// |  ~  |  #  |  $  |  (  |  )  |  &  |    |  +  | LEFT | DOWN | RIGHT |  =  |     |
-// |  :  |  <  |  >  |  {  |  }  |  "  |    |  ,  | PGUP | PSCRN| PGDN  |  %  |     |
-//                   |     |  0  |     |    |     |      |      |
-                        bindings = <
-   &kp GRAVE                    &kp EXCL       &kp AT         &kp HASH        &kp DLLR        &kp PRCNT                    &kp CARET                &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR        &trans
-   &tp LG(LA(LC(LSHFT))) TILDE  &tp LGUI EQUAL &tp LALT MINUS &tp LSHFT LBKT  &tp LCTRL RBKT  &tp LA(LC(LSHFT)) SEMI       &tp LA(LC(LSHFT)) LEFT   &tp RCTRL DOWN  &tp RSHFT UP    &tp LALT RIGHT  &trans          &trans
-   &trans                       &kp PLUS       &kp UNDER      &kp LBRC        &kp RBRC        &kp COLON                    &kp PG_UP                &kp HOME        &kp END         &kp PG_DN       &trans          &trans
-                                                              &trans          &trans          &trans                       &trans                   &trans          &trans
-                        >;
-                };
+            bindings = <
+&trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6        &kp N7           &kp N8           &kp N9           &kp N0           &trans
+&kp F1      &tp LGUI F2   &tp LALT F3   &tp LSHFT F4  &tp LCTRL F5  &kp F6          &kp F7        &tp LCTRL F8     &tp LSHFT F9     &tp LALT F10     &tp LGUI F11     &kp F12
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &out OUT_TOG  &rgb_ug RGB_TOG  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &trans
+                                        &trans        &trans        &trans          &trans        &trans           &trans
+            >;
         };
+
+        raise_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  `  |  !  |  @  |  [  |  ]  |  ^  |    |  .  | HOME |  UP  |  END  |  *  |     |
+            // |  ~  |  #  |  $  |  (  |  )  |  &  |    |  +  | LEFT | DOWN | RIGHT |  =  |     |
+            // |  :  |  <  |  >  |  {  |  }  |  "  |    |  ,  | PGUP | PSCRN| PGDN  |  %  |     |
+            //                   |     |  0  |     |    |     |      |      |
+
+            bindings = <
+&kp GRAVE  &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT    &kp CARET  &kp AMPS        &kp ASTRK     &kp LPAR        &kp RPAR         &trans
+&kp TILDE  &tp LGUI EQUAL  &tp LALT MINUS  &tp LSHFT LBKT  &tp LCTRL RBKT  &kp SEMI     &kp LEFT   &tp RCTRL DOWN  &tp RSHFT UP  &tp LALT RIGHT  &trans           &trans
+&trans     &kp PLUS        &kp UNDER       &kp LBRC        &kp RBRC        &kp COLON    &kp PG_UP  &kp HOME        &kp END       &kp PG_DN       &kp PRINTSCREEN  &trans
+                                           &trans          &trans          &trans       &trans     &trans          &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&mt LCMD TAB      &kp Q  &kp W  &kp E      &kp R      &kp T        &kp Y    &kp U     &kp I         &kp O    &kp P     &kp SQT
+&mt LSHFT ESCAPE  &kp A  &kp S  &kp D      &kp F      &kp G        &kp H    &kp J     &kp K         &kp L    &kp SEMI  &kp MINUS
+&to 0             &kp Z  &kp X  &kp C      &kp V      &kp B        &kp N    &kp M     &kp COMMA     &kp DOT  &kp FSLH  &kp BSLH
+                                &kp LCTRL  &kp SPACE  &lt 1 RET    &kp DEL  &kp BSPC  &kp LEFT_ALT
+            >;
+        };
+    };
 };
