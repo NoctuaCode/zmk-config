@@ -33,9 +33,9 @@
             //                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
 
             bindings = <
-&kp TAB     &kp SEMICOLON  &kp COMMA   &kp PERIOD         &kp P        &kp Y        &kp F      &kp G        &kp C                  &kp R       &kp L       &kp SLASH
-&kp ESCAPE  &tp LGUI A     &tp LALT O  &tp LSHFT E        &tp LCTRL U  &kp I        &kp D      &tp LCTRL H  &tp LSHFT T            &tp LALT N  &tp LGUI S  &kp MINUS
-&to 3       &kp SQT        &kp Q       &kp J              &kp K        &kp X        &kp B      &kp M        &kp W                  &kp V       &kp Z       &kp BSLH
+&kp TAB     &kp B          &kp Y       &kp O              &kp U        &kp SQT      &kp SEMI   &kp L        &kp D                  &kp W       &kp V       &kp Z
+&kp ESCAPE  &tp LGUI C     &tp LALT I  &tp LSHFT E        &tp LCTRL A  &kp COMMA    &kp DOT    &tp LCTRL H  &tp LSHFT T            &tp LALT S  &tp LGUI N  &kp Q
+&to 3       &kp G          &kp X       &kp J              &kp K        &kp MINUS    &kp FSLH   &kp R        &kp M                  &kp F       &kp P       &kp BSLH
                                        &kp LA(LC(LSHFT))  &kp SPACE    &lt 1 RET    &lt 2 DEL  &kp BSPC     &kp LA(LC(LG(LSHFT)))
             >;
         };
