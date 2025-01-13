@@ -27,15 +27,15 @@
 
         default_layer {
             // -----------------------------------------------------------------------------------------
-            // | TAB  | SEMI | COMMA | DOT |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  |  /  |
-            // | ESC  |  A   |   O   |  E  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |  -  |
-            // | SHFT |  '   |   Q   |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  |  \  |
+            // | TAB  |  Q   |  W   |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  -  |
+            // | ESC  |  A   |  S   |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '  |
+            // | SHFT |  Z   |  X   |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  \  |
             //                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
 
             bindings = <
-&kp TAB     &kp B          &kp Y       &kp O              &kp U        &kp SQT      &kp SEMI   &kp L        &kp D                  &kp W       &kp V       &kp Z
-&kp ESCAPE  &tp LGUI C     &tp LALT I  &tp LSHFT E        &tp LCTRL A  &kp COMMA    &kp DOT    &tp LCTRL H  &tp LSHFT T            &tp LALT S  &tp LGUI N  &kp Q
-&to 3       &kp G          &kp X       &kp J              &kp K        &kp MINUS    &kp FSLH   &kp R        &kp M                  &kp F       &kp P       &kp BSLH
+&kp TAB     &kp Q          &kp W       &kp E              &kp R        &kp T        &kp Y      &kp U        &kp I                  &kp O       &kp P          &kp MINUS
+&kp ESCAPE  &tp LGUI A     &tp LALT S  &tp LSHFT D        &tp LCTRL F  &kp G        &kp H      &tp LCTRL J  &tp LSHFT K            &tp LALT L  &tp LGUI SEMI  &kp SQT
+&to 3       &kp Z          &kp X       &kp C              &kp V        &kp B        &kp N      &kp M        &kp COMMA              &kp DOT     &kp FSLH       &kp BSLH
                                        &kp LA(LC(LSHFT))  &kp SPACE    &lt 1 RET    &lt 2 DEL  &kp BSPC     &kp LA(LC(LG(LSHFT)))
             >;
         };
