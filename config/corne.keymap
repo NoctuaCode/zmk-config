@@ -32,10 +32,10 @@
             //                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
 
             bindings = <
-&tp LA(LC(LG(LSHFT))) TAB  &kp Q  &kp W  &kp E     &kp R            &kp T        &kp Y      &kp U                   &kp I      &kp O    &kp P          &kp MINUS
-&mt LCTRL ESCAPE           &kp A  &kp S  &kp D     &kp F            &kp G        &kp H      &kp J                   &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LA(LC(LSHFT))          &kp Z  &kp X  &kp C     &kp V            &kp B        &kp N      &kp M                   &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
-                                         &kp LCMD  &mt LSHFT SPACE  &lt 1 RET    &lt 2 DEL  &mt LEFT_ALT BACKSPACE  &to 3
+&tp LA(LC(LG(LSHFT))) TAB  &kp Q  &kp W  &kp E     &kp R        &kp T        &kp Y      &kp U                &kp I         &kp O    &kp P          &kp MINUS
+&mt LCTRL ESCAPE           &kp A  &kp S  &kp D     &kp F        &kp G        &kp H      &kp J                &kp K         &kp L    &kp SEMICOLON  &kp SQT
+&kp LA(LC(LSHFT))          &kp Z  &kp X  &kp C     &kp V        &kp B        &kp N      &kp M                &kp COMMA     &kp DOT  &kp FSLH       &kp BSLH
+                                         &kp LCMD  &lt 3 SPACE  &lt 1 RET    &lt 2 DEL  &mt LSHFT BACKSPACE  &kp LEFT_ALT
             >;
         };
 
