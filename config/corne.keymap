@@ -32,10 +32,10 @@
             //                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
 
             bindings = <
-&kp TAB     &kp Q       &kp W       &kp E              &kp R        &kp T          &kp Y       &kp U        &kp I                  &kp O       &kp P          &kp SQT
-&kp ESCAPE  &tp LGUI A  &tp LALT S  &tp LSHFT D        &tp LCTRL F  &kp G          &kp H       &tp LCTRL J  &tp LSHFT K            &tp LALT L  &tp LGUI SEMI  &kp MINUS
-&to 3       &kp Z       &kp X       &kp C              &kp V        &kp B          &kp N       &kp M        &kp COMMA              &kp DOT     &kp FSLH       &kp BSLH
-                                    &kp LA(LC(LSHFT))  &kp SPACE    &lt 1 RET      &lt 2 DEL   &kp BSPC     &kp LA(LC(LG(LSHFT)))
+&kp TAB          &kp Q  &kp W  &kp E              &kp R             &kp T              &kp Y           &kp U        &kp I                  &kp O    &kp P     &kp SQT
+&tp LGUI ESCAPE  &kp A  &kp S  &kp D              &kp F             &kp G              &kp H           &kp J        &kp K                  &kp L    &kp SEMI  &kp MINUS
+&mo 2            &kp Z  &kp X  &kp C              &kp V             &kp B              &kp N           &kp M        &kp COMMA              &kp DOT  &kp FSLH  &kp BSLH
+                               &kp LA(LC(LSHFT))  &tp LALT SPACE    &tp LSHFT RET      &tp LCTRL DEL   &lt 2 BSPC   &kp LA(LC(LG(LSHFT)))
             >;
         };
 
@@ -62,19 +62,10 @@
             //                   |     |  0  |     |    |     |      |      |
 
             bindings = <
-&kp GRAVE  &kp EXCL     &kp HASH         &kp LBKT        &kp RBKT        &kp AMPS       &trans    &kp N7        &kp N8        &kp N9       &kp COMMA    &trans
-&kp EQUAL  &tp LGUI AT  &tp LALT DOLLAR  &tp LSHFT LPAR  &tp LCTRL RPAR  &kp PLUS       &kp FSLH  &tp LCTRL N4  &tp LSHFT N5  &tp LALT N6  &tp LGUI N0  &trans
-&kp TILDE  &kp ASTRK    &kp CARET        &kp LBRC        &kp RBRC        &kp PERCENT    &trans    &kp N1        &kp N2        &kp N3       &kp DOT      &trans
-                                         &trans          &trans          &trans         &trans    &trans        &trans
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&mt LCMD TAB      &kp Q  &kp W  &kp E      &kp R      &kp T        &kp Y    &kp U     &kp I         &kp O    &kp P     &kp SQT
-&mt LSHFT ESCAPE  &kp A  &kp S  &kp D      &kp F      &kp G        &kp H    &kp J     &kp K         &kp L    &kp SEMI  &kp MINUS
-&to 0             &kp Z  &kp X  &kp C      &kp V      &kp B        &kp N    &kp M     &kp COMMA     &kp DOT  &kp FSLH  &kp BSLH
-                                &kp LCTRL  &kp SPACE  &lt 1 RET    &kp DEL  &kp BSPC  &kp LEFT_ALT
+&kp GRAVE  &kp EXCL       &kp HASH     &kp LBKT        &kp RBKT        &kp AMPS       &trans    &kp N7        &kp N8        &kp N9       &kp COMMA    &trans
+&kp EQUAL  &tp LGUI DLLR  &tp LALT AT  &tp LSHFT LPAR  &tp LCTRL RPAR  &kp PLUS       &kp FSLH  &tp LCTRL N4  &tp LSHFT N5  &tp LALT N6  &tp LGUI N0  &trans
+&kp TILDE  &kp ASTRK      &kp CARET    &kp LBRC        &kp RBRC        &kp PERCENT    &trans    &kp N1        &kp N2        &kp N3       &kp DOT      &trans
+                                       &trans          &trans          &trans         &trans    &trans        &trans
             >;
         };
     };
