@@ -19,64 +19,9 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-        better_backspace_win: better_backspace_win {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BETTER_BACKSPACE_WIN";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
-
-            tapping-term-ms = <160>;
-        };
-
-        backspace_layer_win: backspace_layer_win {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BACKSPACE_LAYER_WIN";
-            bindings = <&mo>, <&better_backspace_win>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        better_backspace_mac: better_backspace_mac {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BETTER_BACKSPACE_MAC";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
-
-            tapping-term-ms = <160>;
-        };
-
-        backspace_layer_mac: backspace_layer_mac {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BACKSPACE_LAYER_MAC";
-            bindings = <&mo>, <&better_backspace_mac>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
     };
 
     macros {
-        mac_os: mac_os {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&bt BT_SEL 0 &to 3>;
-
-            label = "MAC_OS";
-        };
-
-        windows: windows {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&bt BT_SEL 2 &to 0>;
-
-            label = "WINDOWS";
-        };
     };
 
     keymap {
@@ -90,10 +35,10 @@
             //                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
 
             bindings = <
-&kp TAB          &kp Q  &kp W  &kp E              &kp R         &kp T              &kp Y                     &kp U          &kp I                  &kp O    &kp P     &kp SQT
-&tp LGUI ESCAPE  &kp A  &kp S  &kp D              &kp F         &kp G              &kp H                     &kp J          &kp K                  &kp L    &kp SEMI  &kp MINUS
-&mo 1            &kp Z  &kp X  &kp C              &kp V         &kp B              &kp N                     &kp M          &kp COMMA              &kp DOT  &kp FSLH  &kp BSLH
-                               &kp LA(LC(LSHFT))  &tp LALT RET  &tp LSHFT SPACE    &backspace_layer_win 2 0  &tp LCTRL DEL  &kp LA(LC(LG(LSHFT)))
+&kp TAB          &kp Q  &kp W  &kp E              &kp R         &kp T              &kp Y       &kp U          &kp I                  &kp O    &kp P     &kp SQT
+&tp LGUI ESCAPE  &kp A  &kp S  &kp D              &kp F         &kp G              &kp H       &kp J          &kp K                  &kp L    &kp SEMI  &kp MINUS
+&mo 1            &kp Z  &kp X  &kp C              &kp V         &kp B              &kp N       &kp M          &kp COMMA              &kp DOT  &kp FSLH  &kp BSLH
+                               &kp LA(LC(LSHFT))  &tp LALT RET  &tp LSHFT SPACE    &lt 2 BSPC  &tp LCTRL DEL  &kp LA(LC(LG(LSHFT)))
             >;
         };
 
@@ -124,15 +69,6 @@
 &tp LGUI EQUAL  &kp DLLR   &kp AT     &kp LPAR  &kp RPAR  &kp PLUS       &kp FSLH  &kp N4  &kp N5  &kp N6  &kp N0     &trans
 &kp TILDE       &kp ASTRK  &kp CARET  &kp LBRC  &kp RBRC  &kp PERCENT    &trans    &kp N1  &kp N2  &kp N3  &kp DOT    &trans
                                       &trans    &trans    &trans         &trans    &trans  &trans
-            >;
-        };
-
-        mac {
-            bindings = <
-&kp TAB          &kp Q  &kp W  &kp E              &kp R         &kp T              &kp Y                     &kp U          &kp I                  &kp O    &kp P     &kp SQT
-&tp LGUI ESCAPE  &kp A  &kp S  &kp D              &kp F         &kp G              &kp H                     &kp J          &kp K                  &kp L    &kp SEMI  &kp MINUS
-&mo 1            &kp Z  &kp X  &kp C              &kp V         &kp B              &kp N                     &kp M          &kp COMMA              &kp DOT  &kp FSLH  &kp BSLH
-                               &kp LA(LC(LSHFT))  &tp LALT RET  &tp LSHFT SPACE    &backspace_layer_mac 2 0  &tp LCTRL DEL  &kp LA(LC(LG(LSHFT)))
             >;
         };
     };
