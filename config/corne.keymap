@@ -63,7 +63,7 @@
 
             bindings = <
 &trans  &kp EXCL       &kp HASH     &kp LBRC        &kp RBRC        &kp AMPS       &kp EQUAL  &kp N7        &kp N8        &kp N9       &kp COMMA     &trans
-&trans  &tp LGUI DLLR  &tp LALT AT  &tp LSHFT LBRC  &tp LCTRL RBRC  &kp PERCENT    &kp PLUS   &tp LCTRL N4  &tp LSHFT N5  &tp LALT N6  &tp LGUI DOT  &trans
+&trans  &tp LGUI DLLR  &tp LALT AT  &tp LSHFT LBKT  &tp LCTRL RBKT  &kp PERCENT    &kp PLUS   &tp LCTRL N4  &tp LSHFT N5  &tp LALT N6  &tp LGUI DOT  &trans
 &trans  &kp LT         &kp CARET    &kp LPAR        &kp RPAR        &kp GT         &kp ASTRK  &kp N1        &kp N2        &kp N3       &kp BSLH      &trans
                                     &trans          &kp N0          &trans         &trans     &trans        &trans
             >;
