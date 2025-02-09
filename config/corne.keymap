@@ -32,10 +32,10 @@
             //                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
 
             bindings = <
-&kp LA(LC(LG(LSHFT)))  &kp Q  &kp W  &kp E              &kp R        &kp T            &kp Y          &kp U       &kp I       &kp O    &kp P      &kp MINUS
-&mt LALT ESCAPE        &kp A  &kp S  &kp D              &kp F        &kp G            &kp H          &kp J       &kp K       &kp L    &kp SEMI   &mt LALT SQT
-&kp LGUI               &kp Z  &kp X  &kp C              &kp V        &kp B            &kp N          &kp M       &kp COMMA   &kp DOT  &kp SLASH  &kp LGUI
-                                     &kp LA(LC(LSHFT))  &lt 1 SPACE  &mt LCTRL TAB    &mt LSHFT RET  &lt 2 BSPC  &kp DELETE
+&mt LA(LC(LG(LSHFT))) EQUAL  &kp Q  &kp W  &kp E              &kp R        &kp T            &kp Y          &kp U       &kp I       &kp O    &kp P      &kp MINUS
+&mt LALT ESCAPE              &kp A  &kp S  &kp D              &kp F        &kp G            &kp H          &kp J       &kp K       &kp L    &kp SEMI   &mt LALT SQT
+&kp LGUI                     &kp Z  &kp X  &kp C              &kp V        &kp B            &kp N          &kp M       &kp COMMA   &kp DOT  &kp SLASH  &kp LGUI
+                                           &kp LA(LC(LSHFT))  &lt 1 SPACE  &mt LCTRL TAB    &mt LSHFT RET  &lt 2 BSPC  &kp DELETE
             >;
         };
 
@@ -62,10 +62,10 @@
             //                   |     |  0  |     |    |     |      |      |
 
             bindings = <
-&kp GRAVE       &kp EXCL  &kp HASH   &kp LBRC  &kp RBRC         &kp AMPS        &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp COMMA  &trans
-&mt LALT TILDE  &kp DLLR  &kp AT     &kp LBKT  &kp RBKT         &kp PERCENT     &kp EQUAL     &kp N4  &kp N5  &kp N6  &kp DOT    &trans
-&trans          &kp LT    &kp CARET  &kp LPAR  &kp RPAR         &kp GT          &kp PLUS      &kp N1  &kp N2  &kp N3  &kp BSLH   &trans
-                                     &trans    &mt LSHFT SPACE  &mt LCTRL N0    &trans        &trans  &trans
+&mt LA(LC(LG(LSHFT))) GRAVE  &kp EXCL  &kp HASH   &kp LBRC  &kp RBRC         &kp AMPS        &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp COMMA  &trans
+&mt LALT TILDE               &kp DLLR  &kp AT     &kp LBKT  &kp RBKT         &kp PERCENT     &kp EQUAL     &kp N4  &kp N5  &kp N6  &kp DOT    &trans
+&trans                       &kp LT    &kp CARET  &kp LPAR  &kp RPAR         &kp GT          &kp PLUS      &kp N1  &kp N2  &kp N3  &kp BSLH   &trans
+                                                  &trans    &mt LSHFT SPACE  &mt LCTRL N0    &trans        &trans  &trans
             >;
         };
     };
