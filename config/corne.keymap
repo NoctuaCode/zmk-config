@@ -32,10 +32,10 @@
             //                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
 
             bindings = <
-&mt LA(LC(LG(LSHFT))) EQUAL  &kp Q  &kp W  &kp E              &kp R            &kp T        &kp Y      &kp U           &kp I       &kp O    &kp P      &kp MINUS
-&mt LALT ESCAPE              &kp A  &kp S  &kp D              &kp F            &kp G        &kp H      &kp J           &kp K       &kp L    &kp SEMI   &mt LALT SQT
+&tp LA(LC(LG(LSHFT))) EQUAL  &kp Q  &kp W  &kp E              &kp R            &kp T        &kp Y      &kp U           &kp I       &kp O    &kp P      &kp MINUS
+&tp LALT ESCAPE              &kp A  &kp S  &kp D              &kp F            &kp G        &kp H      &kp J           &kp K       &kp L    &kp SEMI   &tp LALT SQT
 &kp LGUI                     &kp Z  &kp X  &kp C              &kp V            &kp B        &kp N      &kp M           &kp COMMA   &kp DOT  &kp SLASH  &kp LGUI
-                                           &kp LA(LC(LSHFT))  &mt LSHFT SPACE  &lt 1 RET    &lt 2 TAB  &mt LCTRL BSPC  &kp DELETE
+                                           &kp LA(LC(LSHFT))  &tp LSHFT SPACE  &lt 1 RET    &lt 2 TAB  &tp LCTRL BSPC  &kp DELETE
             >;
         };
 
@@ -48,9 +48,9 @@
 
             bindings = <
 &trans  &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 1       &bt BT_SEL 2   &kp HOME             &kp UP_ARROW  &kp END     &kp PG_UP      &bt BT_CLR
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp PRINTSCREEN    &kp C_BRI_DEC  &kp LEFT             &kp DOWN      &kp RIGHT   &kp PAGE_DOWN  &mt LALT C_BRIGHTNESS_INC
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_SEL 0       &kp C_VOL_DN   &kp C_MUTE           &kp C_VOL_UP  &kp C_PREV  &kp C_PP       &mt LGUI C_NEXT
-                         &trans   &trans   &trans             &mt LSHFT TAB  &mt LCTRL BACKSPACE  &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp PRINTSCREEN    &kp C_BRI_DEC  &kp LEFT             &kp DOWN      &kp RIGHT   &kp PAGE_DOWN  &tp LALT C_BRIGHTNESS_INC
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_SEL 0       &kp C_VOL_DN   &kp C_MUTE           &kp C_VOL_UP  &kp C_PREV  &kp C_PP       &tp LGUI C_NEXT
+                         &trans   &trans   &trans             &tp LSHFT TAB  &tp LCTRL BACKSPACE  &trans
             >;
         };
 
@@ -62,10 +62,10 @@
             //                   |     |  0  |     |    |     |      |      |
 
             bindings = <
-&mt LA(LC(LG(LSHFT))) GRAVE  &kp EXCL  &kp HASH   &kp LBRC  &kp RBRC         &kp AMPS        &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp COMMA  &trans
-&mt LALT TILDE               &kp DLLR  &kp AT     &kp LBKT  &kp RBKT         &kp PERCENT     &kp EQUAL     &kp N4  &kp N5  &kp N6  &kp DOT    &trans
+&tp LA(LC(LG(LSHFT))) GRAVE  &kp EXCL  &kp HASH   &kp LBRC  &kp RBRC         &kp AMPS        &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp COMMA  &trans
+&tp LALT TILDE               &kp DLLR  &kp AT     &kp LBKT  &kp RBKT         &kp PERCENT     &kp EQUAL     &kp N4  &kp N5  &kp N6  &kp DOT    &trans
 &trans                       &kp LT    &kp CARET  &kp LPAR  &kp RPAR         &kp GT          &kp PLUS      &kp N1  &kp N2  &kp N3  &kp BSLH   &trans
-                                                  &trans    &mt LSHFT SPACE  &mt LSHFT N0    &trans        &trans  &trans
+                                                  &trans    &tp LSHFT SPACE  &tp LSHFT N0    &trans        &trans  &trans
             >;
         };
     };
