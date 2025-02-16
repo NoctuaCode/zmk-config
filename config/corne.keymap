@@ -32,10 +32,10 @@
             //                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
 
             bindings = <
-&tp LA(LC(LG(LSHFT))) EQUAL  &kp Q  &kp W  &kp E              &kp R            &kp T        &kp Y      &kp U           &kp I       &kp O    &kp P     &tp LA(LC(LSHFT)) SQT
-&tp LALT ESCAPE              &kp A  &kp S  &kp D              &kp F            &kp G        &kp H      &kp J           &kp K       &kp L    &kp SEMI  &tp LALT MINUS
-&tp LGUI GRAVE               &kp Z  &kp X  &kp C              &kp V            &kp B        &kp N      &kp M           &kp COMMA   &kp DOT  &kp FSLH  &tp LGUI BSLH
-                                           &kp LA(LC(LSHFT))  &tp LSHFT SPACE  &lt 1 RET    &lt 2 TAB  &tp LCTRL BSPC  &kp DELETE
+&tp LA(LC(LG(LSHFT))) EQUAL  &kp Q  &kp W  &kp E              &kp R            &kp T            &kp Y      &kp U       &kp I       &kp O    &kp P     &tp LA(LC(LSHFT)) SQT
+&tp LALT ESCAPE              &kp A  &kp S  &kp D              &kp F            &kp G            &kp H      &kp J       &kp K       &kp L    &kp SEMI  &tp LALT MINUS
+&tp LGUI GRAVE               &kp Z  &kp X  &kp C              &kp V            &kp B            &kp N      &kp M       &kp COMMA   &kp DOT  &kp FSLH  &tp LGUI BSLH
+                                           &kp LA(LC(LSHFT))  &tp LCTRL SPACE  &tp LSHFT RET    &lt 1 TAB  &lt 2 BSPC  &kp DELETE
             >;
         };
 
