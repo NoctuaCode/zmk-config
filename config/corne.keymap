@@ -35,7 +35,7 @@
 &kp EQUAL  &kp SEMI    &kp COMMA   &kp DOT            &kp P        &kp Y      &kp F          &kp G        &kp C                  &kp R       &kp L       &kp FSLH
 &kp ESC    &tp LGUI A  &tp LALT O  &tp LSHFT E        &tp LCTRL U  &kp I      &kp D          &tp LCTRL H  &tp LSHFT T            &tp LALT N  &tp LGUI S  &kp MINUS
 &kp GRAVE  &kp APOS    &kp Q       &kp J              &kp K        &kp X      &kp B          &kp M        &kp W                  &kp V       &kp Z       &kp BSLH
-                                   &kp LA(LC(LSHFT))  &kp SPACE    &kp RET    &kp BACKSPACE  &kp TAB      &kp LA(LC(LG(LSHFT)))
+                                   &kp LA(LC(LSHFT))  &lt 1 SPACE  &kp RET    &kp BACKSPACE  &lt 2 TAB    &kp LA(LC(LG(LSHFT)))
             >;
         };
 
