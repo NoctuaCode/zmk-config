@@ -34,10 +34,10 @@
             //                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
 
             bindings = <
-&kp EQUAL         &kp SEMI                    &kp COMMA  &kp DOT                &kp P            &kp Y        &kp F      &kp G              &kp C              &kp R  &kp L                 &kp FSLH
-&tp LCTRL ESCAPE  &kp A                       &kp O      &kp E                  &kp U            &kp I        &kp D      &kp H              &kp T              &kp N  &kp S                 &tp LCTRL MINUS
-&tp LGUI GRAVE    &tp LC(LSHFT) SINGLE_QUOTE  &kp Q      &kp J                  &kp K            &kp X        &kp B      &kp M              &kp W              &kp V  &tp LC(LEFT_SHIFT) Z  &tp LGUI BSLH
-                                                         &kp LG(LA(LC(LSHFT)))  &tp LSHFT SPACE  &lt 1 RET    &lt 2 TAB  &tp LEFT_ALT BSPC  &kp LA(LC(LSHFT))
+&kp EQUAL                     &kp SEMI  &kp COMMA  &kp DOT   &kp P            &kp Y               &kp F         &kp G           &kp C          &kp R  &kp L  &kp FSLH
+&tp LS(LC(LG(LEFT_ALT))) TAB  &kp A     &kp O      &kp E     &kp U            &kp I               &kp D         &kp H           &kp T          &kp N  &kp S  &tp LS(LC(LEFT_ALT)) MINUS
+&lt 1 GRAVE                   &kp SQT   &kp Q      &kp J     &kp K            &kp X               &kp B         &kp M           &kp W          &kp V  &kp Z  &lt 1 BSLH
+                                                   &kp LCMD  &tp LSHFT SPACE  &tp LEFT_ALT RET    &lt 2 ESCAPE  &tp LCTRL BSPC  &kp LS(LCTRL)
             >;
         };
 
@@ -49,10 +49,10 @@
             //                         |       |       |       |   |       |       |       |
 
             bindings = <
-&kp DEL         &kp F1            &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &trans         &kp HOME    &kp UP        &kp END     &kp PG_UP           &bt BT_CLR
-&tp LALT PSCRN  &kp F5            &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &kp C_BRI_DEC  &kp LEFT    &kp DOWN      &kp RIGHT   &kp PG_DN           &tp LALT C_BRI_INC
-&trans          &tp LC(LSHFT) F9  &kp F10  &kp F11  &kp F12  &bt BT_SEL 2    &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP  &kp C_PREV  &tp LC(LSHFT) C_PP  &tp LGUI C_NEXT
-                                           &trans   &trans   &trans          &tp LSHFT TAB  &trans      &trans
+&kp DEL                     &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &trans         &kp HOME    &kp UP        &kp END     &kp PG_UP  &bt BT_CLR
+&tp LS(LC(LG(LALT))) PSCRN  &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &kp C_BRI_DEC  &kp LEFT    &kp DOWN      &kp RIGHT   &kp PG_DN  &tp LS(LC(LALT)) C_BRI_INC
+&trans                      &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_SEL 2    &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP  &kp C_PREV  &kp C_PP   &kp C_NEXT
+                                             &trans   &trans   &trans          &trans         &trans      &trans
             >;
         };
 
@@ -64,10 +64,10 @@
             //                   |     |  0  |     |    |     |      |      |
 
             bindings = <
-&kp GRAVE       &kp EXCL          &kp HASH     &kp LBRC  &kp RBRC  &kp AMPS         &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp COMMA  &kp FSLH
-&tp LALT TILDE  &kp DOLLAR        &kp AT_SIGN  &kp LPAR  &kp RPAR  &kp PERCENT      &kp EQUAL     &kp N4  &kp N5  &kp N6  &kp N0     &tp LEFT_ALT MINUS
-&tp LGUI PIPE   &tp LC(LSHFT) LT  &kp CARET    &kp LBKT  &kp RBKT  &kp GT           &kp PLUS      &kp N1  &kp N2  &kp N3  &kp DOT    &trans
-                                               &trans    &trans    &tp LCTRL RET    &trans        &trans  &trans
+&kp GRAVE                    &kp EXCL          &kp HASH     &kp LBRC  &kp RBRC  &kp AMPS       &kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp COMMA  &kp FSLH
+&tp LS(LA(LG(LCTRL))) TILDE  &kp DOLLAR        &kp AT_SIGN  &kp LPAR  &kp RPAR  &kp PERCENT    &kp EQUAL     &kp N4  &kp N5  &kp N6  &kp N0     &tp LS(LA(LCTRL)) MINUS
+&tp LCTRL PIPE               &tp LC(LSHFT) LT  &kp CARET    &kp LBKT  &kp RBKT  &kp GT         &kp PLUS      &kp N1  &kp N2  &kp N3  &kp DOT    &tp LCTRL BACKSLASH
+                                                            &trans    &trans    &trans         &trans        &trans  &trans
             >;
         };
     };
