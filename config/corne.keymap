@@ -34,9 +34,9 @@
             //                       |  1  | RET | SPC |   | BSPC| DEL  |  2  |
 
             bindings = <
-&kp GRAVE   &kp Q       &kp W           &kp E             &kp R        &kp T                        &kp Y                  &kp U            &kp I              &kp O           &kp P               &kp SQT
-&kp ESCAPE  &tp LCMD A  &tp LEFT_ALT S  &tp LSHFT D       &tp LCTRL F  &kp G                        &kp H                  &tp LCTRL J      &tp LSHFT K        &tp LEFT_ALT L  &tp LCMD SEMICOLON  &kp MINUS
-&kp EQUAL   &kp Z       &kp X           &kp C             &kp V        &kp B                        &kp N                  &kp M            &kp COMMA          &kp DOT         &kp FSLH            &kp BSLH
+&kp GRAVE   &kp B       &kp Y           &kp O             &kp U        &kp SQT                      &kp SEMI               &kp L            &kp D              &kp W           &kp V       &kp Z
+&kp ESCAPE  &tp LCMD C  &tp LEFT_ALT I  &tp LSHFT E       &tp LCTRL A  &kp COMMA                    &kp DOT                &tp LCTRL H      &tp LSHFT T        &tp LEFT_ALT N  &tp LCMD S  &kp Q
+&kp EQUAL   &kp G       &kp X           &kp J             &kp K        &kp MINUS                    &kp FSLH               &kp R            &kp M              &kp F           &kp P       &kp BSLH
                                         &kp LEFT_BRACKET  &lt 1 SPACE  &tp LA(LC(LG(LSHFT))) RET    &tp LA(LC(LSHFT)) TAB  &lt 2 BACKSPACE  &kp RIGHT_BRACKET
             >;
         };
