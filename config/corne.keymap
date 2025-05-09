@@ -49,10 +49,10 @@
             //                         |       |       |       |   |       |       |       |
 
             bindings = <
-&bt BT_SEL 0  &kp F1       &kp F2       &kp F3        &kp F4        &kp DELETE         &trans         &kp HOME              &kp UP_ARROW    &kp END         &kp PG_UP           &bt BT_CLR
-&bt BT_SEL 1  &tp LGUI F5  &tp LALT F6  &tp LSHFT F7  &tp LCTRL F8  &kp PRINTSCREEN    &kp C_BRI_DEC  &tp LCTRL LEFT_ARROW  &tp LSHFT DOWN  &tp LALT RIGHT  &tp LGUI PAGE_DOWN  &tp LALT C_BRIGHTNESS_INC
-&bt BT_SEL 2  &kp F9       &kp F10      &kp F11       &kp F12       &trans             &kp C_VOL_DN   &kp C_MUTE            &kp C_VOL_UP    &kp C_PREV      &kp C_PP            &tp LGUI C_NEXT
-                                        &trans        &trans        &trans             &trans         &trans                &trans
+&bt BT_SEL 0  &kp F1       &kp F2       &kp F3        &kp F4        &kp DELETE         &studio_unlock  &kp HOME              &kp UP_ARROW    &kp END         &kp PG_UP           &bt BT_CLR
+&bt BT_SEL 1  &tp LGUI F5  &tp LALT F6  &tp LSHFT F7  &tp LCTRL F8  &kp PRINTSCREEN    &kp C_BRI_DEC   &tp LCTRL LEFT_ARROW  &tp LSHFT DOWN  &tp LALT RIGHT  &tp LGUI PAGE_DOWN  &tp LALT C_BRIGHTNESS_INC
+&bt BT_SEL 2  &kp F9       &kp F10      &kp F11       &kp F12       &trans             &kp C_VOL_DN    &kp C_MUTE            &kp C_VOL_UP    &kp C_PREV      &kp C_PP            &tp LGUI C_NEXT
+                                        &trans        &trans        &trans             &trans          &trans                &trans
             >;
         };
 
